@@ -1,16 +1,193 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Specific Heading Color */
+        .block-heading h2, 
+        .block-heading h3,
+        .product a {
+            color: #3b99e0;
+            text-decoration: none;
+        }
+
+        /* Block Heading styling */
+        .block-heading {
+            padding-top: 50px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .block-heading p {
+            max-width: 420px;
+            margin: auto;
+            color: #6c757d; /* Bootstrap text-muted color */
+        }
+
+        /* Product Block Styling */
+        .product {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .product:last-child {
+            border-bottom: none;
+        }
+
+        .product img {
+            max-width: 120px;
+        }
+
+        /* Summary Block Styling as per specifications */
+        .summary {
+            background-color: #f7fbff;
+            border-top: 2px solid #5ea4f3;
+            padding: 30px;
+        }
+
+        .summary h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .summary .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .summary .total {
+            border-top: 1px solid #dee2e6;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn-checkout {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+<body class="bg-light">
 
-<body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="block-heading">
+        <h2>Shopping cart</h2>
+        <p>The customer is very important, the customer will be followed by the customer. Now, as an urn, I have no right to be in possession of property.</p>
+    </div>
 
+    <div class="container content">
+        <div class="row">
+            
+            <div class="col-lg-8 bg-white border rounded shadow-sm p-4">
+                
+                <div class="product">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid mx-auto d-block image" src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Iphone">
+                        </div>
+                        <div class="col-md-5 product-details">
+                            <a href="#"><h5>I am very sorry</h5></a>
+                            <div class="product-info small text-muted">
+                                <div>Display: 5 inches</div>
+                                <div>RAM: 4GB</div>
+                                <div>Memory: 32GB</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 product-quantity d-flex align-items-center justify-content-between">
+                            <div class="quantity">
+                                <label for="qty1" class="form-label mb-0 me-2 d-md-none">Quantity:</label>
+                                <input id="qty1" type="number" value="0" class="form-control d-inline-block" style="width: 60px;">
+                            </div>
+                            <div class="price fs-4">$120</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid mx-auto d-block image" src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Iphone">
+                        </div>
+                        <div class="col-md-5 product-details">
+                            <a href="#"><h5>I am very sorry</h5></a>
+                            <div class="product-info small text-muted">
+                                <div>Display: 5 inches</div>
+                                <div>RAM: 4GB</div>
+                                <div>Memory: 32GB</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 product-quantity d-flex align-items-center justify-content-between">
+                            <div class="quantity">
+                                <label for="qty2" class="form-label mb-0 me-2 d-md-none">Quantity:</label>
+                                <input id="qty2" type="number" value="1" class="form-control d-inline-block" style="width: 60px;">
+                            </div>
+                            <div class="price fs-4">$120</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img class="img-fluid mx-auto d-block image" src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Iphone">
+                        </div>
+                        <div class="col-md-5 product-details">
+                            <a href="#"><h5>I am very sorry</h5></a>
+                            <div class="product-info small text-muted">
+                                <div>Display: 5 inches</div>
+                                <div>RAM: 4GB</div>
+                                <div>Memory: 32GB</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 product-quantity d-flex align-items-center justify-content-between">
+                            <div class="quantity">
+                                <label for="qty3" class="form-label mb-0 me-2 d-md-none">Quantity:</label>
+                                <input id="qty3" type="number" value="1" class="form-control d-inline-block" style="width: 60px;">
+                            </div>
+                            <div class="price fs-4">$120</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="summary shadow-sm bg-white">
+                    <h3 class="text-center">Summary</h3>
+                    <div class="item">
+                        <span class="text-muted">Subtotal</span>
+                        <span class="price">$360</span>
+                    </div>
+                    <div class="item">
+                        <span class="text-muted">Discount</span>
+                        <span class="price">$0</span>
+                    </div>
+                    <div class="item">
+                        <span class="text-muted">Shipping</span>
+                        <span class="price">$0</span>
+                    </div>
+                    <div class="total">
+                        <span>Total</span>
+                        <span class="price">$360</span>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-checkout w-100">checkout</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
